@@ -14,7 +14,6 @@ def home_page():
 
 def users_page():
 
-    db = current_app.config["db"]
     if request.method == "GET":
         response = requests.get(api_url('/users/'))
         users = response.json()
