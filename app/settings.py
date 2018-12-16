@@ -1,0 +1,7 @@
+DEBUG = True
+FRONTEND_PORT = 8080
+BACKEND_URL = "http://localhost:"
+BACKEND_PORT = 9999
+SECRET_KEY = "secret"
+WTF_CSRF_ENABLED = True
+ADMIN_USERS=["admin"]
