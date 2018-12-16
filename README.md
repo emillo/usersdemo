@@ -1,12 +1,13 @@
 # Users Demo
 A simple demo of an api for managing a user database
 
-Both the api and the frontend are implemented using flask.
+Both the api and the frontend are implemented using [flask](http://flask.pocoo.org/).
 
 The database is a file based sqlite db; the file [users.sql](app/users.sql) contains the db schema and the creation of the first user 'admin' with password '12345'. The admin user has the privilege to add, delete and edit users.
 
 The frontend webapp is running on http port 8080 and the backend api runs on http port 9999
 
+The responsive UI is implemented with [bulma](https://bulma.io)
                                                                                 
 ## Requirements
 
@@ -15,7 +16,7 @@ First of all we need a sqlite database:
 # in a debian-based distro
 sudo apt install sqlite3
 
-# create the database in the app dir (also create the admin user with password '12345')
+# create the database in the app dir (also creates the admin user with password '12345')
 cd app/
 sqlite3 Users.db < users.sql
 ```
