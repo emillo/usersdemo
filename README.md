@@ -38,7 +38,7 @@ pyvenv .
 source bin/activate
 
 # install the dependencies with pip
-pip install flask flask_restplus flask_login flask_wtf requests passlib sqlite3
+pip install -r requirements.txt
 ```
 
 ## Running the demo
