@@ -24,5 +24,3 @@ def get_login(username):
     if user is not None:
         user.is_admin = user.username in current_app.config["ADMIN_USERS"]
     return user
-
-

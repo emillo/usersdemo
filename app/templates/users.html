@@ -1,49 +1,48 @@
 {% extends "layout.html" %}
 {% block title %}Users list{% endblock %}
 {% block content %}
-    <h1 class="title">Users</h1>
-
-    {% if users %}
-    <form action="" method="post" name="user_list">
+<h1 class="title">Users</h1>
+{% if users %}
+<form action="" method="post" name="user_list">
     <table class="table is-striped is-fullwidth">
         <thead>
             <tr>
-            <th>user ID</th>
-            <th>username</th>
-            {% if current_user.is_admin %}
-            <th>delete</th>
-            {% endif %}
-            
+                <th>user ID</th>
+                <th>username</th>
+                {% if current_user.is_admin %}
+                <th>delete</th>
+                {% endif %}
+                
             </tr>
         </thead>
-      {% for user in users %}
+        {% for user in users %}
         <tr>
             <td>
                 {{ user.ID}}
             </td>
-        <td>
-          <a href={{ url_for('user_page', user_key=user.ID) }}>{{ user.username }}</a>
-        </td>
-       
-        {% if current_user.is_admin %}
-        <td>
-             <label class="checkbox">
-              <input type="checkbox" name="user_keys" value="{{ user.ID }}"/>
-            </label>
-        </td>
-        {% endif %}
-      </tr>
-      {% endfor %}
+            <td>
+                <a href={{ url_for('user_page', user_key=user.ID) }}>{{ user.username }}</a>
+            </td>
+            
+            {% if current_user.is_admin %}
+            <td>
+                <label class="checkbox">
+                    <input type="checkbox" name="user_keys" value="{{ user.ID }}"/>
+                </label>
+            </td>
+            {% endif %}
+        </tr>
+        {% endfor %}
     </table>
     {% if current_user.is_admin %}
     <div class="field is-grouped">
         <div class="control">
-          <button class="button is-danger">Delete</button>
+            <button class="button is-danger">Delete</button>
         </div>
     </div>
     {% endif %}
-    </form>
-    {% endif %}
+</form>
+{% endif %}
 {% endblock %}
 
 

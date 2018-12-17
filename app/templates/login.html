@@ -9,7 +9,6 @@
                 <div class="box">
                     <form action="" method="post" name="login">
                         {{ form.csrf_token }}
-                        
                         <div class="field">
                             <div class="control">
                                 {{ form.username(required=True, autofocus=True,
@@ -22,7 +21,6 @@
                             </p>
                             {% endfor %}
                         </div>
-                        
                         <div class="field">
                             <div class="control">
                                 {{ form.password(required=True, class='input is-large',
@@ -34,7 +32,6 @@
                             </p>
                             {% endfor %}
                         </div>
-                        
                         <button class="button is-block is-info is-large is-fullwidth">
                             Login
                         </button>

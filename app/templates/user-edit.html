@@ -1,11 +1,10 @@
 {% extends "layout.html" %}
 {% block title %}Edit user{% endblock %}
 {% block content %}
-    <h1 class="title">Edit user</h1>
-
-    <form action="" method="post" name="user_edit">
-        {{ form.csrf_token}}
-      <div class="field">
+<h1 class="title">Edit user</h1>
+<form action="" method="post" name="user_edit">
+    {{ form.csrf_token}}
+    <div class="field">
         <label for="title" class="label">username</label>
         <div class="control">
             {{ form.username(required=True, autofocus=True, class='input') }}
@@ -15,55 +14,85 @@
             {{ error }}
         </p>
         {% endfor %}
-      </div>
-      
-      <div class="field">
-          <label for="firstname" class="label">First Name</label>
-          <div class="control">
-              {{ form.firstname(required=True, autofocus=True, class='input') }}
-          </div>
-          {% for error in form.firstname.errors %}
-          <p class="notification has-background-warning">
-              {{ error }}
-          </p>
-          {% endfor %}
-      </div>
-      <div class="field">
-          <label for="lastname" class="label">Last Name</label>
-          <div class="control">
-              {{ form.lastname(required=True, autofocus=True, class='input') }}
-          </div>
-          {% for error in form.lastname.errors %}
-          <p class="notification has-background-warning">
-              {{ error }}
-          </p>
-          {% endfor %}
-      </div>
-      <div class="field">
-          <label for="email" class="label">Email</label>
-          <div class="control">
-              {{ form.email(required=True, autofocus=True, class='input') }}
-          </div>
-          {% for error in form.email.errors %}
-          <p class="notification has-background-warning">
-              {{ error }}
-          </p>
-          {% endfor %}
-      </div>
-      <div class="field">
-          <label for="password" class="label">Password</label>
-          <div class="control">
-              {{ form.password(required=True, autofocus=True, class='input') }}
-          </div>
-      </div>
-
-      <div class="field is-grouped">
+    </div>
+    <div class="field">
+        <label for="firstname" class="label">First Name</label>
         <div class="control">
-          <button class="button is-primary">Save</button>
+            {{ form.firstname(required=True, autofocus=True, class='input') }}
         </div>
-      </div>
-    </form>
+        {% for error in form.firstname.errors %}
+        <p class="notification has-background-warning">
+            {{ error }}
+        </p>
+        {% endfor %}
+    </div>
+    <div class="field">
+        <label for="lastname" class="label">Last Name</label>
+        <div class="control">
+            {{ form.lastname(required=True, autofocus=True, class='input') }}
+        </div>
+        {% for error in form.lastname.errors %}
+        <p class="notification has-background-warning">
+            {{ error }}
+        </p>
+        {% endfor %}
+    </div>
+    <div class="field">
+        <label for="email" class="label">Email</label>
+        <div class="control">
+            {{ form.email(required=True, autofocus=True, class='input') }}
+        </div>
+        {% for error in form.email.errors %}
+        <p class="notification has-background-warning">
+            {{ error }}
+        </p>
+        {% endfor %}
+    </div>
+    <div class="field">
+        <label for="password" class="label">Password</label>
+        <div class="control">
+            {{ form.password(required=True, autofocus=True, class='input') }}
+        </div>
+    </div>    
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-primary">Save</button>
+        </div>
+    </div>
+</form>
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
